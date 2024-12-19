@@ -1,0 +1,23 @@
+﻿server:
+  port: 8080
+
+spring:
+  application:
+    name: loans
+
+  cloud:
+    config:
+      enabled: true
+
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+
+    url: jdbc:postgresql://localhost:5432/mydb
+    username: user
+    password: password
+
+eureka:
+  client:
+    enabled: false
