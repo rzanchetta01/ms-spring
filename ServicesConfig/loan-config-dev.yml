@@ -19,5 +19,19 @@ spring:
     password: password
 
 eureka:
+  instance:
+    hostname:
+      localhost
+    port:
+      9999
   client:
-    enabled: false
+    registerWithEureka:
+      true
+    fetchRegistry:
+      false
+    serviceUrl:
+      defaultZone:
+        http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty:
+      3000
