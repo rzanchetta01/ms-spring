@@ -1,6 +1,15 @@
 ﻿server:
   port:
     9999
+
+spring:
+  application:
+    name: eureka
+
+  cloud:
+    config:
+      enabled: true
+
 eureka:
   instance:
     hostname:
