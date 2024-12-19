@@ -11,17 +11,8 @@ spring:
       enabled: true
 
 eureka:
-  instance:
-    hostname:
-      localhost
   client:
     registerWithEureka:
-      true
+      false
     fetchRegistry:
-      true
-    serviceUrl:
-      defaultZone:
-        http://${eureka.instance.hostname}:${server.port}/eureka/
-  server:
-    wait-time-in-ms-when-sync-empty:
-      3000
+      false
